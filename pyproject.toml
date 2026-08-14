@@ -1,0 +1,19 @@
+[project]
+name = "matushell-cli"
+version = "0.1.0"
+description = "CLI Tool for matushell"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "rich>=13.0.0",
+]
+
+[project.scripts]
+matushell-cli = "matushell_cli.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["matushell_cli"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
